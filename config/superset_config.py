@@ -22,11 +22,12 @@ CORS_OPTIONS = {
 TALISMAN_ENABLED = True
 TALISMAN_CONFIG = {
     "content_security_policy": {
-        "frame-ancestors": "*"
+        "frame-ancestors": "'self' https://*"
     },
     "force_https": False,
     "content_security_policy_nonce_in": ["script-src"],
 }
+
 
 ENABLE_PROXY_FIX = True
 
