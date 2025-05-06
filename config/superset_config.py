@@ -22,7 +22,7 @@ CORS_OPTIONS = {
 TALISMAN_ENABLED = True
 TALISMAN_CONFIG = {
     "content_security_policy": {
-        "frame-ancestors": "'self' https://*"
+        "frame-ancestors": "'self' https://your-frontend-app.com http://localhost:3000"
     },
     "force_https": False,
     "content_security_policy_nonce_in": ["script-src"],
