@@ -4,7 +4,10 @@ FEATURE_FLAGS = {
     "ENABLE_TEMPLATE_PROCESSING": True,
     "EMBEDDED_SUPERSET": True,
     "EMBEDDABLE_CHARTS": True,
+    "GUEST_ROLE": "Public",
 }
+
+GUEST_TOKEN_JWT_SECRET = os.environ.get("GUEST_TOKEN_SECRET", "super-secret-key")
 
 ENABLE_CORS = True
 CORS_OPTIONS = {
@@ -22,7 +25,7 @@ CORS_OPTIONS = {
 TALISMAN_ENABLED = True
 TALISMAN_CONFIG = {
     "content_security_policy": {
-        "frame-ancestors": "'self' https://your-frontend-app.com http://localhost:3000"
+        "frame-ancestors": "'self' http://localhost:3000 https://your-frontend.com"
     },
     "force_https": False,
     "content_security_policy_nonce_in": ["script-src"],
