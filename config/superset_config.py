@@ -7,7 +7,7 @@ FEATURE_FLAGS = {
     "GUEST_ROLE": "Public",
 }
 
-GUEST_TOKEN_JWT_SECRET = os.environ.get("GUEST_TOKEN_SECRET", "super-secret-key")
+PUBLIC_ROLE_LIKE = "Gamma"
 
 ENABLE_CORS = True
 CORS_OPTIONS = {
