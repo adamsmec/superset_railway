@@ -3,8 +3,7 @@ import os
 FEATURE_FLAGS = {
     "ENABLE_TEMPLATE_PROCESSING": True,
     "EMBEDDED_SUPERSET": True,
-    "EMBEDDABLE_CHARTS": True,
-    "GUEST_ROLE": "Public",
+    "EMBEDDABLE_CHARTS": True
 }
 
 PUBLIC_ROLE_LIKE = "Gamma"
@@ -22,18 +21,9 @@ CORS_OPTIONS = {
     ],
 }
 
-TALISMAN_ENABLED = True
-TALISMAN_CONFIG = {
-    "content_security_policy": {
-        "frame-ancestors": "'self' http://localhost:3000 https://your-frontend.com"
-    },
-    "force_https": False,
-    "content_security_policy_nonce_in": ["script-src"],
-}
 
 
 ENABLE_PROXY_FIX = True
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
 
 SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE")
